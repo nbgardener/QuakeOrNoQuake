@@ -1,0 +1,71 @@
+{% extends "base.html"%} {% block title %} About Us {% endblock%}
+{% block content %}
+<p> About Us!</p>
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+<div class="row">
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Group_photo.jpg' %}">
+    </div>
+</div>
+-->
+
+<div class="row">
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Alex_Headshot.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Alexandre Beauchamp
+        <figcaption>https://www.linkedin.com/in/alexandre-beauchamp/</figcaption>
+    </div>
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Ian_Headshot.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Ian Alderson
+        <figcaption>https://www.linkedin.com/in/ian-alderson-193ba4132/</figcaption>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Rayne_Headshot.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Rayne Davidson
+        <figcaption>https://www.linkedin.com/in/rayne-davidson/</figcaption>
+    </div>
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'AlexAyala_Headshot.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Alex Ayala
+        <figcaption>https://www.linkedin.com/in/alex-ayala/</figcaption>    
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Anthony_Headshot_Paint.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Anthony Ambs
+        <figcaption>https://www.linkedin.com/in/anthony-ambs-882a05234/</figcaption>
+    </div>
+    <div class="col-sm">
+        <img class="card-img-top" src="{% static 'Brett_Headshot.jpg' %}">
+    </div>
+    <div class="col-sm">
+        Brett Baker
+        <figcaption>https://www.linkedin.com/in/brett-baker-5b869b/</figcaption>
+    </div>
+ </div>
+
+</body>
+</html>
+{% endblock %}
