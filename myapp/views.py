@@ -15,8 +15,5 @@ def BlankHome(request):
 def AboutUs(request):
     return render(request, "AboutUs.html")
 
-def Results(request):
-    return render(request, "Results.html")
-
 def Sounds(request):
     return render(request, "Sounds.html")
