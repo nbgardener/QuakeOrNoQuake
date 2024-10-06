@@ -1,0 +1,21 @@
+{% extends "base.html"%} {% block title %} Home Page {% endblock%}
+{% block content %}
+<h1> We are Quake Or Not To Quake</h1>
+
+{% load static %}
+<!DOCTYPE html>
+
+<body>
+    <br>
+    <p> 
+        This is a edited recording of real sounds created by the InSight’s seismometer during a lunar quake.
+    </p>
+    <audio controls autoplay src="\static\xa.s12.00.mhz.1970-03-25HR00_evid00003.csv_12720.0.wav"> </audio>
+    <br>
+    <p>
+        more text
+    </p>
+</body>
+
+
+{% endblock %}
