@@ -1,6 +1,5 @@
 {% extends "base.html"%} {% block title %} Sounds {% endblock%}
 {% block content %}
-<p> this is the Sounds page</p>
 
 {% load static %}
 <!DOCTYPE html>
@@ -27,26 +26,20 @@
 <p>The end result is a one-minute audio file that audibly represents the seismic event. This sonification offers a unique way to interpret the data, making it easier to identify patterns and intensities in seismic activity that might otherwise be difficult to visualize or quantify.</p>
 <p>Sonification provides an intuitive means of interpreting scientific data. By converting seismic velocity data into sound, we open up new possibilities for detecting and analyzing seismic events. Subtle differences in pitch and volume may reveal patterns in seismic activity that can be difficult to capture through traditional data visualization techniques. Moreover, this approach could potentially enhance the understanding of seismic phenomena, allowing for a more instinctive recognition of quakes and their characteristics in both educational and research contexts.</p>
 
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-01-19HR00_evid00002.csv_73500.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-03-25HR00_evid00003.csv_12720.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-03-26HR00_evid00004.csv_73020.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-04-25HR00_evid00006.csv_4440.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-04-26HR00_evid00007.csv_52140.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-06-15HR00_evid00008.csv_68400.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-06-26HR00_evid00009.csv_72060.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-07-20HR00_evid00010.csv_18360.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-07-20HR00_evid00011.csv_42240.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-09-26HR00_evid00013.csv_71820.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-10-24HR00_evid00014.csv_41460.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-11-12HR00_evid00015.csv_46200.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-12-11HR00_evid00017.csv_26520.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-12-27HR00_evid00019.csv_74040.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-12-31HR00_evid00021.csv_56460.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1971-01-15HR00_evid00022.csv_45600.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1971-01-28HR00_evid00023.csv_53940.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1971-01-29HR00_evid00024.csv_66060.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1971-02-09HR00_evid00026.csv_13320.0.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1971-03-25HR00_evid00028.csv_55080.0.wav"> </audio>
+<p>Below is a sample of some of the generated audio representations:</p>
+<ul>
+	<li>1970-01-19 <audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-01-19HR00_evid00002.csv_73500.0.wav"> </audio></li>
+
+<li>1970-03-25<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-03-25HR00_evid00003.csv_12720.0.wav"> </audio></li>
+<li>1970-03-26<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-03-26HR00_evid00004.csv_73020.0.wav"> </audio></li>
+<li>1970-04-25<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-04-25HR00_evid00006.csv_4440.0.wav"> </audio> </li>
+<li>1970-04-26<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-04-26HR00_evid00007.csv_52140.0.wav"> </audio></li>
+<li>1970-06-15<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-06-15HR00_evid00008.csv_68400.0.wav"> </audio></li>
+<li>1970-06-26<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-06-26HR00_evid00009.csv_72060.0.wav"> </audio></li>
+<li>1970-07-20<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-07-20HR00_evid00010.csv_18360.0.wav"> </audio></li>
+<li>1970-09-26<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-09-26HR00_evid00013.csv_71820.0.wav"> </audio></li>
+<li>1970-10-24<audio controls autoplay src="\static\sound_generations\xa.s12.00.mhz.1970-10-24HR00_evid00014.csv_41460.0.wav"> </audio></li>
+</ul>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
