@@ -12,8 +12,10 @@
 <audio controls autoplay src="\static\sound_generations\Cropped-Dinks-and-Donks-sample.wav"> </audio>
 
 <p>In this project, we use these “dink” and “donk” sounds to sonify lunar seismic data collected from the Apollo missions. Our data comes from cataloged recordings of seismic events detected on the lunar surface. The seismic data is first filtered and processed to isolate sections of interest, typically the period immediately following the onset of a detected quake.</p>
+<audio controls autoplay src="\static\sound_generations\dink.wav"> </audio>
+<audio controls autoplay src="\static\sound_generations\donk.wav"> </audio>
 
-<p>The input seismic data, particularly the velocity of ground movement (measured in meters per second), is initially time-synchronized and averaged. Specifically, the dataset is grouped by whole seconds, and the average velocity for each second is computed. This reduces noise and highlights meaningful trends in the data.</p>
+<p>The input seismic data, particularly the velocity of ground movement (measured in meters per second), is initially time-synchronized and averaged. </p>
 <p>We then calculate the rolling average of the velocity over a defined window around each data point. This window allows us to capture local variations in seismic intensity while smoothing out short-lived fluctuations. By calculating the intensity, a metric derived from the velocity data, we map the seismic intensity to sound properties—specifically, pitch and volume.</p>
 <p>To further process the data:</p>
 <ol type="1">
@@ -23,8 +25,6 @@
 <li><strong>Pitch shifting</strong>: The velocity is also mapped to a range of frequencies, corresponding to piano notes (A0 to C8). Higher velocities are translated into higher pitches, while lower velocities correspond to lower frequencies.</li>
 <li><strong>Audio blending</strong>: The “dink” and “donk” samples are alternately assigned to different points in the seismic timeline. Each sample is then pitch-shifted according to the velocity-derived frequency and adjusted in volume according to the seismic intensity.</li>
 </ol>
-<audio controls autoplay src="\static\sound_generations\dink.wav"> </audio>
-<audio controls autoplay src="\static\sound_generations\donk.wav"> </audio>
 <p>The end result is a one-minute audio file that audibly represents the seismic event. This sonification offers a unique way to interpret the data, making it easier to identify patterns and intensities in seismic activity that might otherwise be difficult to visualize or quantify.</p>
 <p>Sonification provides an intuitive means of interpreting scientific data. By converting seismic velocity data into sound, we open up new possibilities for detecting and analyzing seismic events. Subtle differences in pitch and volume may reveal patterns in seismic activity that can be difficult to capture through traditional data visualization techniques. Moreover, this approach could potentially enhance the understanding of seismic phenomena, allowing for a more instinctive recognition of quakes and their characteristics in both educational and research contexts.</p>
 
