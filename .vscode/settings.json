@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e934be8c-646c-4c40-bfd6-6d5ff5c6b70b/resourceGroups/Quake-Or-Not-Quake_group/providers/Microsoft.Web/sites/Quake-Or-Not-Quake",
+    "appService.deploySubpath": "."
+}
