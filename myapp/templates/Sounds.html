@@ -4,8 +4,58 @@
 
 {% load static %}
 <!DOCTYPE html>
-
+<audio controls autoplay src="\static\sound_generations\"> </audio>
 <body>
-    <audio controls autoplay src="\static\xa.s12.00.mhz.1970-03-25HR00_evid00003.csv_12720.0.wav"> </audio>
+<h3 id="audio-representation-of-lunar-seismic-data">Audio Representation of Lunar Seismic Data</h3>
+<p>This project also under went some creative exploration in attempting to create an audio representation of the seismic data from the lunar data.</p>
+<p>The sounds chosen for this audio transformation are derived from NASA’s “Dinks and Donks” audio samples recorded by InSight’s Seismic Experiment for Interior Structure (SEIS). These sounds are the result of mechanical friction and thermal contraction within the SEIS instrument, primarily occurring at sunset as components cool. The “dinks” and “donks” reflect internal instrument dynamics that are still not fully understood but provide a unique acoustic footprint of the device’s environment during seismic events. The specific samples we use are extracted from recordings captured shortly after sundown on Sol 226 (July 16, 2019) .<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<audio controls autoplay src="\static\sound_generations\Cropped-Dinks-and-Donks-sample.wav"> </audio>
+
+<p>In this project, we use these “dink” and “donk” sounds to sonify lunar seismic data collected from the Apollo missions. Our data comes from cataloged recordings of seismic events detected on the lunar surface. The seismic data is first filtered and processed to isolate sections of interest, typically the period immediately following the onset of a detected quake.</p>
+
+<p>The input seismic data, particularly the velocity of ground movement (measured in meters per second), is initially time-synchronized and averaged. Specifically, the dataset is grouped by whole seconds, and the average velocity for each second is computed. This reduces noise and highlights meaningful trends in the data.</p>
+<p>We then calculate the rolling average of the velocity over a defined window around each data point. This window allows us to capture local variations in seismic intensity while smoothing out short-lived fluctuations. By calculating the intensity, a metric derived from the velocity data, we map the seismic intensity to sound properties—specifically, pitch and volume.</p>
+<p>To further process the data:</p>
+<ol type="1">
+<li><strong>Time normalization</strong>: We align the seismic data around the start of the quake, setting the quake’s beginning as the zero-point in time.</li>
+<li><strong>Filtering</strong>: The data is filtered to select only the initial seconds after the quake’s start. We use a 60-second window, during which the seismic activity is most pronounced.</li>
+<li><strong>Amplitude averaging</strong>: We compute a rolling average of the velocity over a 60-second interval to derive the overall intensity of the quake. This intensity is then used to scale the volume of the audio output.</li>
+<li><strong>Pitch shifting</strong>: The velocity is also mapped to a range of frequencies, corresponding to piano notes (A0 to C8). Higher velocities are translated into higher pitches, while lower velocities correspond to lower frequencies.</li>
+<li><strong>Audio blending</strong>: The “dink” and “donk” samples are alternately assigned to different points in the seismic timeline. Each sample is then pitch-shifted according to the velocity-derived frequency and adjusted in volume according to the seismic intensity.</li>
+</ol>
+<audio controls autoplay src="\static\sound_generations\dink.wav"> </audio>
+<audio controls autoplay src="\static\sound_generations\donk.wav"> </audio>
+<p>The end result is a one-minute audio file that audibly represents the seismic event. This sonification offers a unique way to interpret the data, making it easier to identify patterns and intensities in seismic activity that might otherwise be difficult to visualize or quantify.</p>
+<p>Sonification provides an intuitive means of interpreting scientific data. By converting seismic velocity data into sound, we open up new possibilities for detecting and analyzing seismic events. Subtle differences in pitch and volume may reveal patterns in seismic activity that can be difficult to capture through traditional data visualization techniques. Moreover, this approach could potentially enhance the understanding of seismic phenomena, allowing for a more instinctive recognition of quakes and their characteristics in both educational and research contexts.</p>
+
+<audio controls autoplay src="xa.s12.00.mhz.1970-01-19HR00_evid00002.csv_73500.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-03-25HR00_evid00003.csv_12720.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-03-26HR00_evid00004.csv_73020.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-04-25HR00_evid00006.csv_4440.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-04-26HR00_evid00007.csv_52140.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-06-15HR00_evid00008.csv_68400.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-06-26HR00_evid00009.csv_72060.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-07-20HR00_evid00010.csv_18360.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-07-20HR00_evid00011.csv_42240.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-09-26HR00_evid00013.csv_71820.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-10-24HR00_evid00014.csv_41460.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-11-12HR00_evid00015.csv_46200.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-12-11HR00_evid00017.csv_26520.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-12-27HR00_evid00019.csv_74040.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1970-12-31HR00_evid00021.csv_56460.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1971-01-15HR00_evid00022.csv_45600.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1971-01-28HR00_evid00023.csv_53940.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1971-01-29HR00_evid00024.csv_66060.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1971-02-09HR00_evid00026.csv_13320.0.wav"> </audio>
+<audio controls autoplay src="xa.s12.00.mhz.1971-03-25HR00_evid00028.csv_55080.0.wav"> </audio>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>A recording of “dinks and donks,” strange sounds created by friction inside of InSight’s seismometer, called SEIS. Scientists aren’t entirely sure what causes each of these sounds, by they are created by parts inside the seismometer con tracting as they cool down, especially during sunset. These were recorded on just after sundown on July 16, 2019 (Sol 226).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>https://www.nasa.gov/audio-and-ringtones/<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
 </body>
 {% endblock %}
